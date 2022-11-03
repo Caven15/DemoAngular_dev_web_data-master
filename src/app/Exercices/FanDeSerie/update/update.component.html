@@ -1,0 +1,20 @@
+<form [formGroup]="UpdateFormGroup" (submit)="Submit()">
+
+  <div>
+    <label>Nom : </label>
+    <input type="text" formControlName="Nom"  placeholder="{{fan.Nom}}">
+  </div>
+
+  <div>
+    <label>Date de naissance :</label>
+    <input type="date" formControlName="BirthDate" placeholder={{fan.BirthDate}}>
+  </div>
+
+  <div>
+    <label>Serie favorite : </label>
+    <input type="text" formControlName="SerieFav" placeholder="{{fan.SerieFav}}">
+  </div>
+
+  <input type="submit" value="Mettre a jour" [disabled]="!UpdateFormGroup.valid">
+
+</form>

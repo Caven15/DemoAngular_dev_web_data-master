@@ -1,0 +1,19 @@
+<h5>le if : *ngIf -> conditionnel sur la structure</h5>
+<h3 *ngIf="ouvert">je suis ouvert</h3>
+<h3 *ngIf="!ouvert">je suis fermer</h3>
+<button type="button" (click)="inversion()">click pour changer l'état</button>
+<hr>
+<h5>le for : *ngFor -> répétition sur la structure</h5>
+<ul>
+  <li *ngFor="let item of listeDonnee">
+    {{item}}
+  </li>
+</ul>
+<hr>
+<h5>parcour de mon talbeau d'objets</h5>
+<ul>
+  <li *ngFor="let item of listeUtilisateurs">
+    {{item.nom}} - à le role : {{item.role}}
+  </li>
+</ul>
+<hr>

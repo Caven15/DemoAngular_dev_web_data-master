@@ -1,0 +1,8 @@
+<h2 class="d-flex justify-content-center p-3"> Démos binding Two Way</h2>
+
+<!-- je récupère la valeur via un ng model (import du formsModule !) et je la stock en direct dans ma variable -->
+<p class="d-flex justify-content-center p-3">j'encode une valeur dans maVariable : <input type="text" [(ngModel)] = "maVariable"></p>
+
+<!-- Affichage de ma valeur via un binding one way -->
+<p class="d-flex justify-content-center p-3">affichage : {{maVariable}}</p>
+

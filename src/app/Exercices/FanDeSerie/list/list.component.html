@@ -1,0 +1,15 @@
+<button (click)="RedirectionToCreate()">Create New Fan</button>
+
+
+<ul>
+
+  <li *ngFor="let fan of fans">
+
+    <div>
+      <p>Nom : {{fan.Nom}} - Date de naissance : {{fan.BirthDate}} - Serie favorite : {{fan.SerieFav}} - <button (click)="RedirectionToDetails(fan.Id)">Details</button> - <button (click)="RedirectionToUpdate(fan.Id)">Update</button> - <button (click)="Delete(fan.Id)">Delete</button> </p>
+
+    </div>
+
+  </li>
+
+</ul>

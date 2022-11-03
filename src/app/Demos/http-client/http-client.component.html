@@ -1,0 +1,17 @@
+<h1>Parcours de la collection</h1>
+<!-- Afichage de mon getAll -->
+<ul>
+  <li *ngFor="let pokemon of listePoke">
+    {{pokemon.name}}
+    <button (click)="getByUrl(pokemon.url)">Detail</button>
+  </li>
+</ul>
+
+<div *ngIf="found">
+  <hr>
+  <h1>Detail</h1>
+  <p>Id : {{currentPokemon.id}}</p>
+  <p>Nom : {{currentPokemon.name}}</p>
+  <p>Hauteur : 0.{{currentPokemon.height}} Cm</p>
+  <p>Poids : {{currentPokemon.weight}} Kg</p>
+</div>

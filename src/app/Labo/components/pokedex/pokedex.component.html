@@ -1,0 +1,40 @@
+<div class="bg-danger">
+  <main>
+    <header>
+      <h1 class="d-flex justify-content-center p-3 font-pokemon ">Pokédex</h1>
+    </header>
+    <div class="row vw-100 p-4">
+
+      <section class="col-4 mb-3 mt-2">
+          <div *ngFor="let item of List" class="d-grid gap-2 p-1">
+            <button class="btn btn-dark font-pokemon" (click)="getByUrl(item.url)">{{item.name}}</button>
+          </div>
+          <div class="container mt-2 mb-3">
+            <div class="row">
+              <div class="col-6 d-grid gap-2">
+                <button class="d-flex justify-content-center btn btn-dark" (click)="getListMoins()" [disabled]="compteurPokemon <= 0"><img src="../../../../assets/arrow-left-circle-fill.svg" alt="Bootstrap" width="35" height="35"></button>
+              </div>
+              <div class="col-6 d-grid gap-2">
+                <button class="d-flex justify-content-center btn btn-dark" (click)="getListPlus()" [disabled]="compteurPokemon >= 730"><img src="../../../../assets/arrow-right-circle-fill.svg" alt="Bootstrap" width="35" height="35"></button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="col-8 bg-dark mb-3 p-3 rounded-5" *ngIf="click">
+        <div class="d-flex justify-content-center bg-fond-pokedex mt-3">
+          <div class="d-flex align-items-center">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{pokemon.id}}.svg" alt="image pokemon" class="img-responsive center-block img" >
+          </div>
+        </div>
+      </section>
+
+      <section class="col-8 bg-dark mb-3 p-3 rounded-5" *ngIf="!click">
+        <div class="d-flex justify-content-center bg-fond-pokedex mt-3">
+          <div class="d-flex align-items-center"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>

@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)] ="item"><button (click)="addItem()">Ajouter</button>
+<ul>
+  <app-shopping-item
+    *ngFor="let article of listeArticle"
+    [nom] = "article.nom"
+    (clickOnDelete)="deleteByName($event)"
+  ></app-shopping-item>
+</ul>

@@ -1,0 +1,20 @@
+<form [formGroup]="FanCreateForm" (ngSubmit)="Submit()">
+  <div>
+    <label >Nom : </label>
+    <input type="text" formControlName="Nom">
+  </div>
+
+  <div>
+    <label> Date de naissance : </label>
+    <input type="date" formControlName="BirthDate">
+  </div>
+
+  <div>
+    <label>Serie favorite :</label>
+    <input type="text" formControlName="SerieFav">
+  </div>
+
+  <input type="submit" value="Ajouter" [disabled]="!FanCreateForm.valid">
+
+
+</form>

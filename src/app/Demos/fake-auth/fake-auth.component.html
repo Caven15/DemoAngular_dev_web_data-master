@@ -1,0 +1,6 @@
+<p>fake-auth works!</p>
+<button (click)="connexion()">Connexion</button>
+<button (click)="logout()">Logout</button>
+
+<p *ngIf="isConnected">Je suis connecté </p>
+<p *ngIf="!isConnected">Je suis deconnecté </p>
