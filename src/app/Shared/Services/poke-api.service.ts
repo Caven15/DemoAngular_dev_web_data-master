@@ -18,11 +18,11 @@ export class PokeApiService {
   }
 
   getAll(){
-    return this._http.get<any[]>(`${this.baseUrl}/pokemon?offset=0&limit=15`)
+    return this._http.get<any[]>(`${this.baseUrl}/pokemon?offset=0&limit=10`)
   }
 
   getList(startIndex : string){
-    return this._http.get<any[]>(`${this.baseUrl}/pokemon?offset=${startIndex}&limit=15`)
+    return this._http.get<any[]>(`${this.baseUrl}/pokemon?offset=${startIndex}&limit=10`)
   }
 
 }

@@ -1,19 +1,31 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .font-pokemon{
   font-family: "Pokemon";
 }
 
 .bg-fond-pokedex{
   background-image: url("../src/assets/fond_pokemon.jpg");
-  margin: 40px;
-  height: 95%;
-  background-color: rgb(88, 88, 88);
+  background-position: top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  margin: 2%;
+  height: 90%;
   border-radius: 100px;
-  border: solid rgb(0, 0, 0) 5px;
+  border: solid rgb(0, 0, 0) 10px;
 }
 
 .img{
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 430px;
+  max-height: 430px;
+}
+
+svg-white{
+  color: white;
 }

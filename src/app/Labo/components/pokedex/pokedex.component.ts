@@ -14,7 +14,8 @@ export class PokedexComponent implements OnInit {
 
   pokemon : PokemonLabo
   click : boolean = false
-  compteurPokemon : number = 0
+  compteurPokemonMin : number = 0
+  compteurPokemonMax : number = 10
 
   constructor(
     private _pokeService : PokeApiService
@@ -34,17 +35,23 @@ export class PokedexComponent implements OnInit {
   }
 
   getListPlus(){
-    this.compteurPokemon += 15
-    this._pokeService.getList(String(this.compteurPokemon)).subscribe((res : any) => {
+    this.compteurPokemonMin += 10
+    this.compteurPokemonMax += 10
+    this._pokeService.getList(String(this.compteurPokemonMin)).subscribe((res : any) => {
       this.List = res.results
     })
   }
 
   getListMoins(){
-    this.compteurPokemon -= 15
-    this._pokeService.getList(String(this.compteurPokemon)).subscribe((res : any) => {
+    this.compteurPokemonMin -= 10
+    this.compteurPokemonMax = 10
+    this._pokeService.getList(String(this.compteurPokemonMin)).subscribe((res : any) => {
       this.List = res.results
     })
+  }
+
+  getDetails(){
+    //...
   }
 
 }
